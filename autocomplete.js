@@ -473,9 +473,3 @@ class Autocomplete extends HTMLElement {
 }
 
 customElements.define('auto-complete', Autocomplete);
-
-const ac = document.getElementById('work');
-
-fetch('https://jsonplaceholder.typicode.com/todos')
-.then(response => response.json())
-.then(json => ac.setItems(json))
