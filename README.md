@@ -4,7 +4,7 @@
 
 ## Демо
 
-![Demo](/yungvldai/autocomplete/blob/master/demo.gif)
+![Demo](demo.gif)
 
 ## Особенности
 
