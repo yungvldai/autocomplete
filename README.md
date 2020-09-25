@@ -18,6 +18,11 @@
 import './autocomplete.js';
 ```
 
+Еще можно подключить к странице так:
+```html
+<script src="https://raw.githubusercontent.com/yungvldai/autocomplete/master/autocomplete.min.js"></script>
+```
+
 ## Использование
 
 ```html
