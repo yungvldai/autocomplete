@@ -69,10 +69,18 @@ class Autocomplete extends HTMLElement {
   }
   
   clear() {
+    const valueBefore = this.value;
+    
     // просто очистка значений
     this.value = null;
     this._updateQuery('');
     this._clearChosen();
+    
+    // диспатчим событие value-input
+    this._dispatchEvent(this.refs.input, 'value-input', {
+      valueBefore, 
+      value: this.value
+    });
   }
   
   setValue(newValue) {
@@ -465,3 +473,9 @@ class Autocomplete extends HTMLElement {
 }
 
 customElements.define('auto-complete', Autocomplete);
+
+const ac = document.getElementById('work');
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(response => response.json())
+.then(json => ac.setItems(json))
